@@ -1,6 +1,7 @@
 import { Eye, EyeOff, Mail, Lock, User } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../../config/api";
 
 function SignupForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -29,7 +30,7 @@ function SignupForm() {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:3000/signup", {
+      const response = await fetch(`${API_BASE_URL}/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

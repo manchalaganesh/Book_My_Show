@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../config/api";
 import {
   Users,
   Crown,
@@ -98,7 +99,7 @@ export default function UserManagement() {
   useEffect(() => {
     const fetchBackendUsers = async () => {
       try {
-        const response = await fetch("http://localhost:3000/users");
+        const response = await fetch(`${API_BASE_URL}/users`);
         if (response.ok) {
           const data = await response.json();
           if (Array.isArray(data) && data.length > 0) {
