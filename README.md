@@ -143,8 +143,3 @@ cd Book_My_Show
 | `GET` | `/users` | Retrieve registered users list |
 | `PATCH` | `/users/:id` | Update user details/status |
 | `DELETE` | `/users/:id` | Remove a user |
-
----
-
-## 📄 License
-This project is open-source and available under the [MIT License](LICENSE).
